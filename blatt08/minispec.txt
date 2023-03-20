@@ -1,0 +1,10 @@
+Minispec: Thema auswählen
+
+IN: Wunschgebiet, Themen
+OUT: ThemaMitDozent
+
+Pseudocode:
+prüfe ob #Wunschgebiet in #Themen enthalten
+    wenn ja, dann wähle Thema aus #Themen und gebe #ThemaMitDozent zurück
+    wenn nein, dann wähle ein anderes, möglichst ähnliches Thema aus #Themen aus, und gebe #ThemaMitDozent zurück
+

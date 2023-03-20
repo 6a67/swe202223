@@ -1,0 +1,10 @@
+Datenlexikon:
+
+persönlicheDaten = Vorname + {Zweitname} + Nachname + MatrikelNummer + Adresse + Studienfach + Semester
+Adresse = Strasse + Hausnummer + PLZ + Ort
+Wunschgebiet = Studiengebiet
+Anmeldebogen = persönlicheDaten + Wunschgebiet + Dozent
+Themen = Thema + {Thema} + Dozent
+ThemaMitDozent = Thema + Dozent
+AnmeldebogenMitUnterschrift = Anmeldebogen + Unterschrift
+AnmeldestatusMitGrund = Status + Grund

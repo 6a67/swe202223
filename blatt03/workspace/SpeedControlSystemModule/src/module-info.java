@@ -1,0 +1,3 @@
+module SpeedControlSystemModule {
+    exports packageSpeedControlSystem;
+}

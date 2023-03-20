@@ -1,0 +1,25 @@
+Kennung	Beschreibung	Vorgänger	Dauer [Wochen]
+A	Analyse des Altsystems		2
+B	Gliederung der Kernfunktionalitäten und Ausbaufunktionalitäten	A	1
+C	Untersuchung der Schnittstellen zu Fremdsysteme	A	1
+D	Erstellung eines Datenmodells für die neue zentrale Datenbank		2
+E	Erstellung eines Prototypen für den Web-Client		1.5
+F	Erstellen eines Migrationsprogramms	D	2
+G	Migration der Daten der Testfilialen	F	1
+H	Entwurf und Implementierung der serverseitigen Kernfunktionalitäten	B, C	7
+I	Realisierung der Funktionalität der Oberfläche	E	5
+J	Koppeln der neuen Datenbank an die Kernfunktionalität	G,H	1
+K	Integration von Client und Server	J	1
+L	Testen des Systems durch die Testfilialen	K	1
+M	Überarbeitung der Kernfunktionalitäten	L	2
+N	Entwurf und Implementierung der Ausbaufunktionalitäten	K	4
+O	Beseitigung von GUI-Fehlern	L	1
+P	Realisierung der Oberflächen für die Ausbaufunktionalitäten	I/O	1
+Q	Migration der Daten sämtlicher noch fehlender Filialen	G	2
+R	Integration der Ausbaufunktionalität und der zugehörigen Oberflächen ins Gesamtsystem	M,N,(O,)P(,Q)	1
+S	Testen des Systems durch die Testfilialen	R	1
+T	Testen des Gesamtsystems durch ein externes Test-Team	R	1
+U	Einarbeitung der letzten Korrekturen und Optimierungen	S,T	2
+V	Vervollständigung der Dokumentation und Erstellung eines Benutzerhandbuchs	U	2
+W	Schulungen für alle Filialleiter	S,T	2
+X	Roll out des Systems in allen Filialen	V,W / U	4

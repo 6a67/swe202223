@@ -1,0 +1,53 @@
+<project name="aufgabe" default="jar" basedir=".">
+
+    <property name="bin.dir" location="bin"/>
+    <property name="src.dir" location="aufgabe/src"/>
+    <property name="libbin.dir" location="lib/bin"/>
+    <property name="jar.file" location="aufgaben.jar"/>
+
+    <fileset id="sources" dir="${src}" includes="**/*.java" />
+
+    <patternset id="classes">
+        <include name="${src}/**/*.java" />
+    </patternset>
+
+
+    <target name="compile" depends="clean">
+        <mkdir dir="${bin.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${bin.dir}">
+        <classpath>
+            <fileset dir="${libbin.dir}" includes="commons-lang3-3.12.0.jar" />
+        </classpath>
+        </javac>
+    </target>
+
+    <target name="jar" depends="compile">
+        <jar destfile="${jar.file}" basedir="${bin.dir}">
+            <zipgroupfileset includes="*.jar" dir="lib/bin"/>
+            <manifest>
+                <attribute name="Manifest-Version" value="1.0" />
+                <attribute name="Main-Class" value="de.uos.inf.swe.Main" />
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" depends="jar">
+        <java jar="${jar.file}" fork="true" failonerror="true" />
+    </target>
+
+    <target name="clean">
+        <delete dir="${bin.dir}"/>
+        <delete file="${jar.file}" />
+        <delete file="manifest.mf" />
+        <delete dir="doc" />
+    </target>
+
+    <target name="doc">
+        <javadoc sourcepath="${src.dir}" destdir="doc">
+                <classpath>
+            <fileset dir="${libbin.dir}" includes="commons-lang3-3.12.0.jar" />
+        </classpath>
+        </javadoc>
+    </target>
+
+</project>
